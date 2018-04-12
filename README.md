@@ -19,7 +19,7 @@ Example
 -------
 1. Build locally the project `PS > build.ps1`, this will create the `output` folder
 1. Switch to the `output` folder
-2. To run a full analysus try `PS > Run.ps1`
+2. To run a full analysis `PS > Run.ps1`
 3. After a successful execution your are going to find two files
     * `HostName-Findings.csv` Contains all the action items related to IIS/ASP.NET operation best practices
     * `HostName-BaseLineInfo.csv` Contains general information about the current state of the system
