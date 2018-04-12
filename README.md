@@ -17,11 +17,14 @@ The CheckIIS command performs the following validations
 
 Example
 -------
-1. Clone or download to your file system.
-2. Build locally the project `PS > build.ps1`, this will create the `output` folder
-3. Switch to the `output` folder
-4. To run a full analysis `PS > Run.ps1`
-5. After a successful execution your are going to find two files
+1. Go to [Powerops Releases](https://github.com/gioRodriguez/powerops/releases) and download the lasted Release (Source code zip)
+2. Unzip the files locally
+3. Open a PowerShell session in Adim mode
+4. Go to the unziped folder powerops-version/
+5. Build the project `PS > build.ps1`, this will create the `output` folder
+6. Copy the `output` folder content to the target server to analyze
+7. Tun a full analysis `PS > Run.ps1`
+8. After a successful execution your are going to find two files
     * `HostName-Findings.csv` Contains all the action items related to IIS/ASP.NET operation best practices
     * `HostName-BaseLineInfo.csv` Contains general information about the current state of the system
         * System information
