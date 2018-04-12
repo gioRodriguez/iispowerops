@@ -18,7 +18,16 @@ The CheckIIS command performs the following validations
 Example
 -------
 1. To run a full analysus try `PS > Run.ps1`
-2. After a successful execution your are going to find two 
+2. After a successful execution your are going to find two files
+    * `HostName-Findings.csv` Contains all the action items related to IIS/ASP.NET operation best practices
+    * `HostName-BaseLineInfo.csv` Contains general information about the current state of the system
+        * System information
+        * Hotfixes
+        * Drivers
+        * IIS information
+        * .NETFX information
+        * Installed componets information
+        * Installed services
 
 Notes
 -------
