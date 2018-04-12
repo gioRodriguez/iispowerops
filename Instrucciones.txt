@@ -1,0 +1,9 @@
+1.  Cambie la extensión del archivo restore-file-names-extensions.renamteExtensionTo_ps1 a restore-file-names-extensions.ps1
+2.  Inicie una consola PowerShell con privilegios de administrador
+3.  Dentro de la consola PowerShell navegue hasta donde descomprimió los archivos
+4.  Ejecute el script restore-file-names-extensions
+        El script restore-file-names-extensions se encargará de cambiar las extensiones a todos los archivos necesarios
+5.  En la misma consola de PowerShell con privilegios de administrador ejecute: .\Run.ps1
+6.  Al terminar la ejecución del script encontrará dos archivos nuevos
+        [PC_NAME]-BaseLineInfo.csv
+        [PC_NAME]-Findings.csv
