@@ -1,5 +1,7 @@
 # powerops
-set of PowerShell comands to help in the operation of IIS/ASP.NET application
+
+# Description
+Set of PowerShell comands to help in the operation of IIS/ASP.NET application
 
 Perform several operative validation tasks on the current host
 
