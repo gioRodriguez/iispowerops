@@ -1,19 +1,25 @@
 # Powerops
+=============
 
 Set of PowerShell comands to help in the operation of IIS/ASP.NET application
 
-Perform several operative validation tasks on the current host
+Markups
+-------
+Perform several IIS operative validation tasks on the current host
 
 The CheckIIS performs the following validations
-    - Checks that the appPools does not have the default value for recycling time
-    - Checks that the appPools does not have the default value for idle time
-    - Checks the appPools identity
-    - Checks that the appPools does have at least one application
-    - Checks that the appPools does not have at more than one application
-    - Checks if some app pool has aplications in debug mode
 
-EXAMPLE
+1. Checks that the appPools does not have the default value for recycling time
+2. Checks that the appPools does not have the default value for idle time
+3. Checks the appPools identity
+4. Checks that the appPools does have at least one application
+5. Checks that the appPools does not have at more than one application
+6. Checks if some app pool has aplications in debug mode
+
+Example
+-------
 PowerShell>CheckIIS
 
-NOTES
+Notes
+-------
 You need to run this function as an Administrator
