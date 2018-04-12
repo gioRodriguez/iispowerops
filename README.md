@@ -1,33 +1,35 @@
 # Powerops
-Set of PowerShell comands to help in the operation of IIS/ASP.NET application
+Set of PowerShell commands to help in the operation of IIS/ASP.NET applications
 
 Description
 -------
-Perform several IIS operative validation tasks on the current host
+Perform several IIS operative validation tasks on the current host in a single step
 
-The CheckIIS performs the following validations
+The CheckIIS command performs the following validations
 
-1. Checks app pools does not have the default value for recycling time
-2. Checks app pools does not have the default value for idle time
-3. Checks app pools identity
-4. Checks app pools does have at least one application
-5. Checks app pools does not have more than one application
-6. Checks app pools with aplications in debug mode
+1. Validations applied over IIS application pools
+    1. Recycling time not in default value
+    2. Idle timeout not in default value 
+    3. Identity set in ApplicationPoolIdentity
+    4. At least one application in each application pool
+    5. No more than one application in each application pool
+    6. No aplications in debug mode
 
 Example
 -------
-PowerShell>CheckIIS
+1. To run a full analysus try `PS > Run.ps1`
+2. After a successful execution your are going to find two 
 
 Notes
 -------
-You need to run this function as an Administrator
+You need to run this commands as an Administrator
 
 
 Developers
 -------
 Any design improvement is welcome, any new idea is also welcome :)
 
-Almost all the code in Powerops was designed and written trhough TDD, so, I encourage you to contininue with this good pattern
+Almost all the code in Powerops was designed and written through TDD, so, I encourage you to continue with this good habit
 
 Setup development environment
 -------

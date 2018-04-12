@@ -17,7 +17,7 @@ function GetAppPools {
     $iisAppPools = Get-ChildItem -Path 'IIS:\AppPools'
     $appPoolArray = New-Object System.Collections.ArrayList
     $iisAppPools | Foreach-Object {
-        $applications = GetApplicationsByAppPoolName $_.Name
+        $applications = GetApplicationsByAppPoolName $_.Name $_.Applications
         $site = GetSiteByName $_.PSChildName
         $appPoolArray.Add((NewAppPool $_ $applications $site)) > $null
     }
@@ -64,7 +64,7 @@ function CheckIfApplicationInDebug ($applicationPath) {
     if(-not $applicationPath){
         return $false
     }
-    $configFile = "$applicationPath/web.config"
+    $configFile = "$applicationPath/web.config" -replace "%SystemDrive%", "$env:SystemDrive"
     if(-not(Test-Path -Path "$configFile")){
         Write-Warning "CheckIfApplicationInDebug: The specified config path does not exists $configFile"
         return $false
@@ -75,11 +75,17 @@ function CheckIfApplicationInDebug ($applicationPath) {
     return $false
 }
 
-function GetApplicationsByAppPoolName ($appPoolName) {
+function GetApplicationsByAppPoolName ($appPoolName, $application) {
     $applicationsArray = New-Object System.Collections.ArrayList
     $applicationsRaw = @(Get-WebConfigurationProperty "/system.applicationHost/sites/site/application[@applicationPool='$appPoolName']" "machine/webroot/apphost" -name path)    
     $applicationsRaw | ForEach-Object {
         $webapp = (Get-Webapplication $_.Value)
+
+        #if at site root level without application
+        if($_.Value -eq "/"){
+			$webapp = (Get-WebSite $application)
+        }
+        
         $applicationInfo = @{
             'Name' = $_.Value;
             'PhysicalPath' = $webapp.PhysicalPath;

@@ -50,4 +50,3 @@ function CheckIIS () {
 }
 
 Export-ModuleMember -Function 'Check*'
-Export-ModuleMember -Function 'HomeBrokerPerformanceReport'

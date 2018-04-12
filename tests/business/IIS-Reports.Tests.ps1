@@ -3,17 +3,6 @@ Import-Module '..\app\business\IIS-Reports.psm1' -Force
 InModuleScope 'IIS-Reports' {
     Describe 'IIS Reports tests' {        
 
-        It 'must generate the HomeBroker performance report' {
-            # Arrange        
-            Mock GetHomeBrokerReport {}
-            
-            # Act
-            PerformHomeBrokerReport
-
-            # Assert
-            Assert-MockCalled GetHomeBrokerReport -Exactly 1
-        }
-
         It 'must generate IIS backup with backup name' {
             # Arrange        
             Mock NewIISBackup {}

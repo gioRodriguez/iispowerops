@@ -11,7 +11,7 @@ function CheckRecyclingTimeIntervalMustNotBeDefault ($appPool) {
 function CheckIdleTimeoutMustNotBeDefault ($appPool) {    
     if($appPool.HasDefaultIdleTimeout()){
         $message = "The application pool '$($appPool.Name)' has the default idle timeout $($appPool.idleTimeoutInminutes) minutes"
-        return NewIISValidationInfo 'CheckIdleTimeoutMustNotBeDefault' $message
+        return NewIISValidationError 'CheckIdleTimeoutMustNotBeDefault' $message
     }
     return GetOkValidation
 }

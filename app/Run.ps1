@@ -6,5 +6,5 @@ CheckIIS
 GetIISBaseLine
 
 $nl = [Environment]::NewLine
-Write-Output "$nl Listo, muchas gracias por ejecutar los scripts :)$nl"
-Write-Output " Por favor no olvide los archivos $nl    $env:computername-BaseLineInfo.csv $nl    $env:computername-Findings.csv$nl"
+Write-Output "$nl Done :)$nl"
+Write-Output " Do not forget the files $nl    $env:computername-BaseLineInfo.csv $nl    $env:computername-Findings.csv$nl"
