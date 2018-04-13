@@ -3,7 +3,9 @@ Set of PowerShell commands to help in the operation of IIS/ASP.NET applications
 
 Description
 -------
-Perform several IIS operative validation tasks on the current host in a single step
+In any improvement effort, the first recommended step is explore and to answer where are we standding on (to explore and to analize our current state) in addition to where would us like to be, altough each best practice could be confirmed and applied manually, this project has been started at first scope to help during the discovery. As first output, we are going to have two CSV files, in which we are going to have the recommended action items to cover and general information about the current system. 
+
+These commands perform system read only operations, there are not modifications action involved, the only exeption are of two csv files created only to contain the final results.
 
 * Notes:
     * Remember that when an application pool is activated then a new process called worker process is created, started and managed by IIS, is inside this process where the application code is executing.
