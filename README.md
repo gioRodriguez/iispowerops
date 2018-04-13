@@ -24,7 +24,7 @@ The CheckIIS command performs the following validations
 
     4. At least one application in each application pool
     5. No more than one application in each application pool
-        * As each the application pool starts a different worker process, this is the ultimate isolation layer in IIS, so, if some application is having performance issues, unhandled exceptions, causing thread contention and/or resource managment problems, then other applications should not be affected by this bad behavior, and that is true, well onlyt when each application is isolated in its own application pool.
+        * As each the application pool starts a different worker process, this is the ultimate isolation layer in IIS, so, if for some reason an application is having performance issues, unhandled exceptions, thread contention and/or resource managment problems, then other applications should not be affected by this bad behavior, and that is true, but only when each application is isolated in its own application pool.
 
     6. No aplications leave with `<compilation debug="true"/>`
         * Never leave accidentally (or deliberately) the `<compilation debug="true"/>` switch on the application's web.config file, doing so causes a number of non-optimal this to happen including:
