@@ -3,20 +3,6 @@ Import-Module "$(Split-Path -Parent $MyInvocation.MyCommand.Path)\business\IIS-A
 Import-Module "$(Split-Path -Parent $MyInvocation.MyCommand.Path)\business\IIS-Reports.psm1" -Force
 Import-Module "$(Split-Path -Parent $MyInvocation.MyCommand.Path)\business\ValidationRules-Collection.psm1" -Force
 
-function HomeBrokerPerformanceReport {
-    <#
-    .SYNOPSIS
-    Gets the HomeBroker Report from Dynatrace
-    .DESCRIPTION
-    Gets the HomeBroker Report from Dynatrace's dashboard as a PDF file in the current folder
-    .EXAMPLE
-    HomeBrokerPerformanceReport
-    .NOTES
-    You need to run this function as an Administrator and have access to the Dynatrace server
-    #>
-    PerformHomeBrokerReport
-}
-
 function CheckIIS () {
     <#
     .SYNOPSIS
