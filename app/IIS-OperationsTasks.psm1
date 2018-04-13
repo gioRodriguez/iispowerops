@@ -6,15 +6,15 @@ Import-Module "$(Split-Path -Parent $MyInvocation.MyCommand.Path)\business\Valid
 function CheckIIS () {
     <#
     .SYNOPSIS
-    Perform several operative validation tasks on the current host
+    Perform several IIS operative validation tasks on the current host in a single step
     .DESCRIPTION
     The CheckIIS performs the following validations
-        - Checks that the appPools does not have the default value for recycling time
-        - Checks that the appPools does not have the default value for idle time
-        - Checks the appPools identity
-        - Checks that the appPools does have at least one application
-        - Checks that the appPools does not have at more than one application
-        - Checks if some app pool has aplications in debug mode
+        - Recycling time not in default value
+        - Idle timeout not in default value
+        - Identity set in ApplicationPoolIdentity
+        - At least one application in each application pool
+        - No more than one application in each application pool
+        - No aplications in debug mode
     .EXAMPLE
     CheckIIS
     .NOTES
