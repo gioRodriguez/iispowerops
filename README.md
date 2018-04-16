@@ -6,7 +6,7 @@ In any improvement effort, the first recommended step is to explore and to answe
 
 These commands perform system read only operations, there are not modifications action involved, the only exceptions are of two csv files created only to contain the final results.
 
-- [x] means implemented
+- [x] means verification implemented
 - [ ] means coming soon
 
 ## IIS checklist
