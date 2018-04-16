@@ -8,11 +8,11 @@ In any improvement effort, the first recommended step is to explore and to answe
 These commands perform system read only operations, there are not modifications action involved, the only exceptions are of two csv files created only to contain the final results.
 
 ## IIS application pools checklist
-- [x] [Recycling regular time should not be the default value](###recycling-regular-time-should-not-be-the-default-value)
-- [x] Recycling idle time-out should not be the default value
-- [x] Identity should be the default value
-- [x] At least one application in each application pool and No more than one application in each application pool
-- [x] No applications leave with `<compilation debug="true"/>`
+- [x] [Recycling regular time should not be the default value](#recycling-regular-time-should-not-be-the-default-value)
+- [x] [Recycling idle time-out should not be the default value](#recycling-idle-time-out-should-not-be-the-default-value)
+- [x] [Identity should be the default value](#identity-should-be-the-default-value)
+- [x] [At least one application in each application pool and No more than one application in each application pool](#at-least-one-application-in-each-application-pool-and-No-more-than-one-application-in-each-application-pool)
+- [x] [No applications leave with `<compilation debug="true"/>`](#no-applications-leave-with-`<compilation-debug="true"/>`)
 
 ### Recycling regular time should not be the default value
 The default recycling time is 1740 minutes, then, an app pool recycling will happen during business hours at some moment, this could cause performance degradation and user sessions finished, (the user session finished problem could be mitigated whether ASP.NET keeps its session state out-proc, for example in SqlServer), the recommended value for recycling regular time is 0 (set to zero, this means that the recycling will not occur due to elapsed time), in addition to specifying a Specific Time, for example at 3:00am
