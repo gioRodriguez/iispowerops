@@ -10,10 +10,10 @@ These commands perform system read only operations, there are not modifications 
 - [ ] means coming soon
 
 ## IIS checklist
-- [x] [AppPool recycling regular time set to "00:00:00"](#recycling-regular-time-should-not-be-the-default-value)
-- [x] [AppPool recycling idle time-out set to "00:00:00"](#recycling-idle-time-out-should-not-be-the-default-value)
-- [x] [AppPool identity set to ApplicationPoolIdentity](#identity-should-be-the-default-value)
-- [x] [Only one application per application pool](#at-least-one-application-in-each-application-pool-and-no-more-than-one-application-in-each-application-pool)
+- [x] [AppPool recycling regular time set to "00:00:00"](#recycling-regular-time-set-to-000000)
+- [x] [AppPool recycling idle time-out set to "00:00:00"](#recycling-idle-time-out-set-to-000000)
+- [x] [AppPool identity set to ApplicationPoolIdentity](#identity-set-to-applicationpoolidentity)
+- [x] [Only one application per application pool](#only-one-application-per-application-pool)
 - [x] [No applications leave with `<compilation debug="true"/>`](#no-applications-leave-with-compilation-debugtrue)
 - [ ] AppPool queue length set to 5000
 - [ ] AppPool auto start set to true
