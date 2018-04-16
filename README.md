@@ -2,7 +2,6 @@
 Set of PowerShell commands to help in the operation of IIS/ASP.NET applications
 
 ## Description
--------
 In any improvement effort, the first recommended step is to explore and to answer where are we standing on (to explore and to analyze our current state) in addition to where would us like to be, although each best practice could be confirmed and applied manually, this project has been started at first scope to help during the discovery. As first output, we are going to have two CSV files, in which we are going to have the recommended action items to cover and general information about the current system. 
 
 These commands perform system read only operations, there are not modifications action involved, the only exceptions are of two csv files created only to contain the final results.
@@ -30,11 +29,12 @@ These commands perform system read only operations, there are not modifications 
 - [ ] ASP.NET deployment/retail attribute set to true
 - [ ] Custom errors set to RemoteOnly
 
-## windows Server checklist
+## Windows Server checklist
 - [ ] User account control enabled
 - [ ] Windows logs (Application/System/Security) archived and retained
 - [ ] System processor scheduling set to 24 (24 Decimal or 18 hexa)
 
+## Documentation
 ### Recycling regular time set to "00:00:00"
 The default recycling time is 1740 minutes, then, an app pool recycling will happen during business hours at some moment, this could cause performance degradation and user sessions finished, (the user session finished problem could be mitigated whether ASP.NET keeps its session state out-proc, for example in SqlServer), the recommended value for recycling regular time is 0 (set to zero, this means that the recycling will not occur due to elapsed time), in addition to specifying a Specific Time, for example at 3:00am
 
