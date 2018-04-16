@@ -55,7 +55,6 @@ Never leave accidentally (or deliberately) the `<compilation debug="true"/>` swi
 * For more good reasons to do not leave debug="true" please refer to [ASP.NET Memory: If your application is in production… then why is debug=true](https://blogs.msdn.microsoft.com/tess/2006/04/12/asp-net-memory-if-your-application-is-in-production-then-why-is-debugtrue/) and [Don't run production ASP.ENT Application with debug="true" enabled](https://weblogs.asp.net/scottgu/442448)
 
 ## Example
--------
 1. Go to [Powerops Releases](https://github.com/gioRodriguez/powerops/releases) and download the lasted Release (Source code zip)
 2. Unzip the files locally
 3. Open a PowerShell session in Adim mode
@@ -75,18 +74,14 @@ Never leave accidentally (or deliberately) the `<compilation debug="true"/>` swi
         * Installed services
 
 ## Notes
--------
 You need to run these commands as an Administrator
 
 ## Developers
--------
 Any design improvement is welcome, any new idea is also welcome :)
 
 Almost all the code in Powerops was designed and written through TDD, so, I encourage you to continue with this good habit
 
 ## Setup development environment
--------
-
 * Install [Pester](https://github.com/pester/Pester) (Pester is the ubiquitous test and mock framework for PowerShell.)
 * To installation details please refer to [Pester Installation and Update](https://github.com/pester/Pester/wiki/Installation-and-Update)
 
