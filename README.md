@@ -1,5 +1,5 @@
 # Powerops
-Set of PowerShell commands to help in the operation of IIS/ASP.NET applications
+PowerShell commands to check and verify IIS/application pools/ASP.NET operating best practices
 
 ## Description
 In any improvement effort, the first recommended step is to explore and to answer where are we standing on (to explore and to analyze our current state) in addition to where would us like to be, although each best practice could be confirmed and applied manually, this project has been started at first scope to help during the discovery. As first output, we are going to have two CSV files, in which we are going to have the recommended action items to cover and general information about the current system. 
